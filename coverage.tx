@@ -1,0 +1,378 @@
+Compiler run successful!
+Analysing contracts...
+Running tests...
+
+Ran 12 tests for test/Presale.t.sol:PresaleTest
+[PASS] test_blacklist_and_remove() (gas: 308784)
+[PASS] test_buyWithEther_blacklisted() (gas: 88727)
+[PASS] test_buyWithEther_success() (gas: 165351)
+[PASS] test_buyWithStable_USDC_6dec() (gas: 211963)
+[PASS] test_buyWithStable_USDT_18dec() (gas: 208977)
+[PASS] test_claim_revert_notEnded() (gas: 34612)
+[PASS] test_claim_success() (gas: 270154)
+[PASS] test_emergencyWithdraws() (gas: 80032)
+[PASS] test_getEtherPrice() (gas: 14800)
+[PASS] test_phaseIncrement() (gas: 291472)
+[PASS] test_revert_incorrectToken() (gas: 1200578)
+[PASS] test_revert_notStarted() (gas: 2178657)
+Suite result: ok. 12 passed; 0 failed; 0 skipped; finished in 5.09ms (12.54ms CPU time)
+
+Ran 1 test suite in 9.26ms (5.09ms CPU time): 12 tests passed, 0 failed, 0 skipped (12 total tests)
+src/Presale.sol:
+- Line (location: (source ID: 31, lines: 29..41, bytes: 988..1686), hits: 13) -> "er, uint256 amount);\r\n\r\n    cons...  require(endingTime > startingT"
+- Function "constructor" (location: (source ID: 31, lines: 29..41, bytes: 988..1686), hits: 13) -> "er, uint256 amount);\r\n\r\n    cons...  require(endingTime > startingT"
+- Line (location: (source ID: 31, lines: 30..31, bytes: 1258..1294), hits: 13) -> "nable(msg.sender) {\r\n        saleTok"
+- Statement (location: (source ID: 31, lines: 30..31, bytes: 1258..1294), hits: 13) -> "nable(msg.sender) {\r\n        saleTok"
+- Line (location: (source ID: 31, lines: 31..32, bytes: 1304..1330), hits: 13) -> "= saleTokenAddress_;\r\n    "
+- Statement (location: (source ID: 31, lines: 31..32, bytes: 1304..1330), hits: 13) -> "= saleTokenAddress_;\r\n    "
+- Line (location: (source ID: 31, lines: 32..33, bytes: 1340..1366), hits: 13) -> "dress = usdtAddress_;\r\n   "
+- Statement (location: (source ID: 31, lines: 32..33, bytes: 1340..1366), hits: 13) -> "dress = usdtAddress_;\r\n   "
+- Line (location: (source ID: 31, lines: 33..34, bytes: 1376..1420), hits: 13) -> "ddress = usdcAddress_;\r\n        fundsReceive"
+- Statement (location: (source ID: 31, lines: 33..34, bytes: 1376..1420), hits: 13) -> "ddress = usdcAddress_;\r\n        fundsReceive"
+- Line (location: (source ID: 31, lines: 34..35, bytes: 1430..1464), hits: 13) -> " fundsReceiverAddress_;\r\n        d"
+- Statement (location: (source ID: 31, lines: 34..35, bytes: 1430..1464), hits: 13) -> " fundsReceiverAddress_;\r\n        d"
+- Line (location: (source ID: 31, lines: 35..36, bytes: 1474..1510), hits: 13) -> "ress = dataFeedAddress_;\r\n        ma"
+- Statement (location: (source ID: 31, lines: 35..36, bytes: 1474..1510), hits: 13) -> "ress = dataFeedAddress_;\r\n        ma"
+- Line (location: (source ID: 31, lines: 36..37, bytes: 1520..1548), hits: 13) -> "ount = maxSellingAmount_;\r\n "
+- Statement (location: (source ID: 31, lines: 36..37, bytes: 1520..1548), hits: 13) -> "ount = maxSellingAmount_;\r\n "
+- Line (location: (source ID: 31, lines: 37..38, bytes: 1558..1582), hits: 13) -> "rtingTime = startingTime"
+- Statement (location: (source ID: 31, lines: 37..38, bytes: 1558..1582), hits: 13) -> "rtingTime = startingTime"
+- Line (location: (source ID: 31, lines: 38..39, bytes: 1592..1608), hits: 13) -> "  endingTime = e"
+- Statement (location: (source ID: 31, lines: 38..39, bytes: 1592..1608), hits: 13) -> "  endingTime = e"
+- Line (location: (source ID: 31, lines: 39..40, bytes: 1618..1679), hits: 13) -> ";\r\n        phases = phases_;\r\n        require(endingTime > st"
+- Statement (location: (source ID: 31, lines: 39..40, bytes: 1618..1679), hits: 13) -> ";\r\n        phases = phases_;\r\n        require(endingTime > st"
+- Branch (branch: 0, path: 0) (location: (source ID: 31, lines: 39..40, bytes: 1618..1679), hits: 0) -> ";\r\n        phases = phases_;\r\n        require(endingTime > st"
+- Branch (branch: 0, path: 1) (location: (source ID: 31, lines: 39..40, bytes: 1618..1679), hits: 13) -> ";\r\n        phases = phases_;\r\n        require(endingTime > st"
+- Line (location: (source ID: 31, lines: 42..45, bytes: 1692..1843), hits: 12) -> "Incorrect Presale Times\");\r\n    ...eTokenAddress).safeTransferFrom("
+- Function "fundPresale" (location: (source ID: 31, lines: 42..45, bytes: 1692..1843), hits: 12) -> "Incorrect Presale Times\");\r\n    ...eTokenAddress).safeTransferFrom("
+- Line (location: (source ID: 31, lines: 43..44, bytes: 1759..1836), hits: 12) -> "56 amount_) external onlyOwner {...C20(saleTokenAddress).safeTransf"
+- Statement (location: (source ID: 31, lines: 43..44, bytes: 1759..1836), hits: 12) -> "56 amount_) external onlyOwner {...C20(saleTokenAddress).safeTransf"
+- Line (location: (source ID: 31, lines: 46..47, bytes: 1849..1934), hits: 2) -> "nder, address(this), amount_);\r\n... blackList(address user_) extern"
+- Statement (location: (source ID: 31, lines: 46..47, bytes: 1904..1931), hits: 2) -> "lackList(address user_) ext"
+- Function "blackList" (location: (source ID: 31, lines: 46..47, bytes: 1849..1934), hits: 2) -> "nder, address(this), amount_);\r\n... blackList(address user_) extern"
+- Line (location: (source ID: 31, lines: 47..48, bytes: 1939..2031), hits: 1) -> "lyOwner { isBlacklisted[user_] =...eBlacklist(address user_) extern"
+- Statement (location: (source ID: 31, lines: 47..48, bytes: 2000..2028), hits: 1) -> "Blacklist(address user_) ext"
+- Function "removeBlacklist" (location: (source ID: 31, lines: 47..48, bytes: 1939..2031), hits: 1) -> "lyOwner { isBlacklisted[user_] =...eBlacklist(address user_) extern"
+- Line (location: (source ID: 31, lines: 49..57, bytes: 2037..2324), hits: 7) -> "yOwner { isBlacklisted[user_] = ...         currentPhase++;\r\n      "
+- Function "checkCurrentPhase" (location: (source ID: 31, lines: 49..57, bytes: 2037..2324), hits: 7) -> "yOwner { isBlacklisted[user_] = ...         currentPhase++;\r\n      "
+- Statement (location: (source ID: 31, lines: 50..51, bytes: 2119..2135), hits: 7) -> " amount_) privat"
+- Line (location: (source ID: 31, lines: 50..55, bytes: 2116..2289), hits: 7) -> "256 amount_) private returns(uin...timestamp >= endingTime) {\r\n    "
+- Branch (branch: 1, path: 0) (location: (source ID: 31, lines: 50..55, bytes: 2116..2289), hits: 7) -> "256 amount_) private returns(uin...timestamp >= endingTime) {\r\n    "
+- Statement (location: (source ID: 31, lines: 51..52, bytes: 2154..2173), hits: 7) -> "{\r\n        if(curre"
+- Statement (location: (source ID: 31, lines: 51..52, bytes: 2154..2197), hits: 7) -> "{\r\n        if(currentPhase < 2) {\r\n        "
+- Statement (location: (source ID: 31, lines: 51..52, bytes: 2154..2230), hits: 7) -> "{\r\n        if(currentPhase < 2) ...   if(totalSold + amount_ >= pha"
+- Statement (location: (source ID: 31, lines: 51..52, bytes: 2201..2230), hits: 0) -> "if(totalSold + amount_ >= pha"
+- Line (location: (source ID: 31, lines: 51..54, bytes: 2151..2279), hits: 7) -> "6) {\r\n        if(currentPhase < ... || block.timestamp >= endingTim"
+- Branch (branch: 2, path: 0) (location: (source ID: 31, lines: 51..54, bytes: 2151..2279), hits: 7) -> "6) {\r\n        if(currentPhase < ... || block.timestamp >= endingTim"
+- Line (location: (source ID: 31, lines: 52..53, bytes: 2250..2264), hits: 7) -> " block.timesta"
+- Statement (location: (source ID: 31, lines: 52..53, bytes: 2250..2264), hits: 7) -> " block.timesta"
+- Line (location: (source ID: 31, lines: 55..56, bytes: 2298..2317), hits: 7) -> "   currentPhase++;\r"
+- Statement (location: (source ID: 31, lines: 55..56, bytes: 2298..2317), hits: 7) -> "   currentPhase++;\r"
+- Line (location: (source ID: 31, lines: 58..73, bytes: 2330..3342), hits: 8) -> "}\r\n        }\r\n        return cur...ender, fundsReceiverAddress, amo"
+- Function "buyWithStable" (location: (source ID: 31, lines: 58..73, bytes: 2330..3342), hits: 8) -> "}\r\n        }\r\n        return cur...ender, fundsReceiverAddress, amo"
+- Line (location: (source ID: 31, lines: 59..60, bytes: 2416..2474), hits: 8) -> "s tokenUsedtoToBuy_, uint256 amount_) external {\r\n        "
+- Statement (location: (source ID: 31, lines: 59..60, bytes: 2416..2474), hits: 8) -> "s tokenUsedtoToBuy_, uint256 amount_) external {\r\n        "
+- Branch (branch: 3, path: 0) (location: (source ID: 31, lines: 59..60, bytes: 2416..2474), hits: 1) -> "s tokenUsedtoToBuy_, uint256 amount_) external {\r\n        "
+- Branch (branch: 3, path: 1) (location: (source ID: 31, lines: 59..60, bytes: 2416..2474), hits: 7) -> "s tokenUsedtoToBuy_, uint256 amount_) external {\r\n        "
+- Line (location: (source ID: 31, lines: 60..61, bytes: 2484..2584), hits: 7) -> "sBlacklisted[msg.sender], \"User ...lock.timestamp >= startingTime &"
+- Statement (location: (source ID: 31, lines: 60..61, bytes: 2484..2584), hits: 7) -> "sBlacklisted[msg.sender], \"User ...lock.timestamp >= startingTime &"
+- Branch (branch: 4, path: 0) (location: (source ID: 31, lines: 60..61, bytes: 2484..2584), hits: 0) -> "sBlacklisted[msg.sender], \"User ...lock.timestamp >= startingTime &"
+- Branch (branch: 4, path: 1) (location: (source ID: 31, lines: 60..61, bytes: 2484..2584), hits: 7) -> "sBlacklisted[msg.sender], \"User ...lock.timestamp >= startingTime &"
+- Line (location: (source ID: 31, lines: 61..62, bytes: 2594..2690), hits: 7) -> "mestamp <= endingTime, \"Presale ...ire(tokenUsedtoToBuy_ == usdtAdd"
+- Statement (location: (source ID: 31, lines: 61..62, bytes: 2594..2690), hits: 7) -> "mestamp <= endingTime, \"Presale ...ire(tokenUsedtoToBuy_ == usdtAdd"
+- Branch (branch: 5, path: 0) (location: (source ID: 31, lines: 61..62, bytes: 2594..2690), hits: 1) -> "mestamp <= endingTime, \"Presale ...ire(tokenUsedtoToBuy_ == usdtAdd"
+- Branch (branch: 5, path: 1) (location: (source ID: 31, lines: 61..62, bytes: 2594..2690), hits: 6) -> "mestamp <= endingTime, \"Presale ...ire(tokenUsedtoToBuy_ == usdtAdd"
+- Line (location: (source ID: 31, lines: 62..63, bytes: 2700..2756), hits: 6) -> "kenUsedtoToBuy_ == usdcAddress, \"Incorrect token\");\r\n   "
+- Statement (location: (source ID: 31, lines: 62..63, bytes: 2700..2756), hits: 6) -> "kenUsedtoToBuy_ == usdcAddress, \"Incorrect token\");\r\n   "
+- Statement (location: (source ID: 31, lines: 62..63, bytes: 2712..2756), hits: 6) -> "uy_ == usdcAddress, \"Incorrect token\");\r\n   "
+- Line (location: (source ID: 31, lines: 63..64, bytes: 2766..2794), hits: 6) -> " dec = IERC20Decimals(tokenU"
+- Statement (location: (source ID: 31, lines: 63..64, bytes: 2766..2794), hits: 6) -> " dec = IERC20Decimals(tokenU"
+- Statement (location: (source ID: 31, lines: 64..65, bytes: 2808..2817), hits: 6) -> "ecimals()"
+- Statement (location: (source ID: 31, lines: 64..65, bytes: 2819..2878), hits: 5) -> "\n        uint256 tokenAmountToReceive;\r\n        if (dec == "
+- Line (location: (source ID: 31, lines: 64..66, bytes: 2804..2969), hits: 6) -> "_).decimals();\r\n        uint256 ...ase];\r\n        else tokenAmountT"
+- Branch (branch: 6, path: 0) (location: (source ID: 31, lines: 64..66, bytes: 2804..2969), hits: 5) -> "_).decimals();\r\n        uint256 ...ase];\r\n        else tokenAmountT"
+- Branch (branch: 6, path: 1) (location: (source ID: 31, lines: 64..66, bytes: 2804..2969), hits: 1) -> "_).decimals();\r\n        uint256 ...ase];\r\n        else tokenAmountT"
+- Line (location: (source ID: 31, lines: 65..66, bytes: 2893..2969), hits: 1) -> "ToReceive = amount_ * 1e6 / phas...ase];\r\n        else tokenAmountT"
+- Statement (location: (source ID: 31, lines: 65..66, bytes: 2893..2969), hits: 1) -> "ToReceive = amount_ * 1e6 / phas...ase];\r\n        else tokenAmountT"
+- Line (location: (source ID: 31, lines: 66..67, bytes: 2979..3018), hits: 6) -> " amount_ * 10**(18 - dec) * 1e6 / phase"
+- Statement (location: (source ID: 31, lines: 66..67, bytes: 2979..3018), hits: 6) -> " amount_ * 10**(18 - dec) * 1e6 / phase"
+- Line (location: (source ID: 31, lines: 67..68, bytes: 3028..3061), hits: 6) -> "hase];\r\n        checkCurrentPhase"
+- Statement (location: (source ID: 31, lines: 67..68, bytes: 3028..3061), hits: 6) -> "hase];\r\n        checkCurrentPhase"
+- Line (location: (source ID: 31, lines: 68..69, bytes: 3071..3121), hits: 6) -> "ntToReceive);\r\n        totalSold += tokenAmountToR"
+- Statement (location: (source ID: 31, lines: 68..69, bytes: 3071..3121), hits: 6) -> "ntToReceive);\r\n        totalSold += tokenAmountToR"
+- Branch (branch: 7, path: 0) (location: (source ID: 31, lines: 68..69, bytes: 3071..3121), hits: 0) -> "ntToReceive);\r\n        totalSold += tokenAmountToR"
+- Branch (branch: 7, path: 1) (location: (source ID: 31, lines: 68..69, bytes: 3071..3121), hits: 6) -> "ntToReceive);\r\n        totalSold += tokenAmountToR"
+- Line (location: (source ID: 31, lines: 69..70, bytes: 3131..3183), hits: 6) -> "       require(totalSold <= maxSellingAmount, \"sold "
+- Statement (location: (source ID: 31, lines: 69..70, bytes: 3131..3183), hits: 6) -> "       require(totalSold <= maxSellingAmount, \"sold "
+- Line (location: (source ID: 31, lines: 70..71, bytes: 3193..3278), hits: 6) -> "      userTokenBalance[msg.sende...ceive;\r\n        IERC20(tokenUsed"
+- Statement (location: (source ID: 31, lines: 70..71, bytes: 3193..3278), hits: 6) -> "      userTokenBalance[msg.sende...ceive;\r\n        IERC20(tokenUsed"
+- Line (location: (source ID: 31, lines: 71..72, bytes: 3288..3335), hits: 6) -> "safeTransferFrom(msg.sender, fundsReceiverAddre"
+- Statement (location: (source ID: 31, lines: 71..72, bytes: 3288..3335), hits: 6) -> "safeTransferFrom(msg.sender, fundsReceiverAddre"
+- Line (location: (source ID: 31, lines: 74..87, bytes: 3348..4106), hits: 3) -> "\r\n        emit TokenBuy(msg.send...}(\"\");\r\n        require(success,"
+- Function "buyWithEther" (location: (source ID: 31, lines: 74..87, bytes: 3348..4106), hits: 3) -> "\r\n        emit TokenBuy(msg.send...}(\"\");\r\n        require(success,"
+- Line (location: (source ID: 31, lines: 75..76, bytes: 3399..3457), hits: 3) -> "ceive);\r\n    }\r\n\r\n    function buyWithEther() external pay"
+- Statement (location: (source ID: 31, lines: 75..76, bytes: 3399..3457), hits: 3) -> "ceive);\r\n    }\r\n\r\n    function buyWithEther() external pay"
+- Branch (branch: 8, path: 0) (location: (source ID: 31, lines: 75..76, bytes: 3399..3457), hits: 1) -> "ceive);\r\n    }\r\n\r\n    function buyWithEther() external pay"
+- Branch (branch: 8, path: 1) (location: (source ID: 31, lines: 75..76, bytes: 3399..3457), hits: 2) -> "ceive);\r\n    }\r\n\r\n    function buyWithEther() external pay"
+- Line (location: (source ID: 31, lines: 76..77, bytes: 3467..3567), hits: 2) -> "      require(!isBlacklisted[msg...       require(block.timestamp >"
+- Statement (location: (source ID: 31, lines: 76..77, bytes: 3467..3567), hits: 2) -> "      require(!isBlacklisted[msg...       require(block.timestamp >"
+- Branch (branch: 9, path: 0) (location: (source ID: 31, lines: 76..77, bytes: 3467..3567), hits: 1) -> "      require(!isBlacklisted[msg...       require(block.timestamp >"
+- Branch (branch: 9, path: 1) (location: (source ID: 31, lines: 76..77, bytes: 3467..3567), hits: 1) -> "      require(!isBlacklisted[msg...       require(block.timestamp >"
+- Line (location: (source ID: 31, lines: 77..78, bytes: 3577..3630), hits: 1) -> "Time && block.timestamp <= endingTime, \"Presale not s"
+- Statement (location: (source ID: 31, lines: 77..78, bytes: 3577..3630), hits: 1) -> "Time && block.timestamp <= endingTime, \"Presale not s"
+- Statement (location: (source ID: 31, lines: 77..78, bytes: 3596..3623), hits: 1) -> "tamp <= endingTime, \"Presal"
+- Statement (location: (source ID: 31, lines: 77..78, bytes: 3596..3630), hits: 1) -> "tamp <= endingTime, \"Presale not s"
+- Statement (location: (source ID: 31, lines: 77..78, bytes: 3608..3623), hits: 1) -> "ngTime, \"Presal"
+- Line (location: (source ID: 31, lines: 78..79, bytes: 3640..3708), hits: 1) -> "\");\r\n        uint256 usdValue = ...value * getEtherPrice() / 1e18;\r"
+- Statement (location: (source ID: 31, lines: 78..79, bytes: 3640..3708), hits: 1) -> "\");\r\n        uint256 usdValue = ...value * getEtherPrice() / 1e18;\r"
+- Statement (location: (source ID: 31, lines: 78..79, bytes: 3671..3685), hits: 1) -> " msg.value * g"
+- Statement (location: (source ID: 31, lines: 78..79, bytes: 3671..3708), hits: 1) -> " msg.value * getEtherPrice() / 1e18;\r"
+- Line (location: (source ID: 31, lines: 79..80, bytes: 3718..3757), hits: 1) -> "int256 tokenAmountToReceive = usdValue "
+- Statement (location: (source ID: 31, lines: 79..80, bytes: 3718..3757), hits: 1) -> "int256 tokenAmountToReceive = usdValue "
+- Line (location: (source ID: 31, lines: 80..81, bytes: 3767..3800), hits: 1) -> "ases[currentPhase];\r\n        chec"
+- Statement (location: (source ID: 31, lines: 80..81, bytes: 3767..3800), hits: 1) -> "ases[currentPhase];\r\n        chec"
+- Line (location: (source ID: 31, lines: 81..82, bytes: 3810..3860), hits: 1) -> "ase(tokenAmountToReceive);\r\n        totalSold += t"
+- Statement (location: (source ID: 31, lines: 81..82, bytes: 3810..3860), hits: 1) -> "ase(tokenAmountToReceive);\r\n        totalSold += t"
+- Branch (branch: 10, path: 0) (location: (source ID: 31, lines: 81..82, bytes: 3810..3860), hits: 0) -> "ase(tokenAmountToReceive);\r\n        totalSold += t"
+- Branch (branch: 10, path: 1) (location: (source ID: 31, lines: 81..82, bytes: 3810..3860), hits: 1) -> "ase(tokenAmountToReceive);\r\n        totalSold += t"
+- Line (location: (source ID: 31, lines: 82..83, bytes: 3870..3922), hits: 1) -> "ToReceive;\r\n        require(totalSold <= maxSellingA"
+- Statement (location: (source ID: 31, lines: 82..83, bytes: 3870..3922), hits: 1) -> "ToReceive;\r\n        require(totalSold <= maxSellingA"
+- Line (location: (source ID: 31, lines: 83..84, bytes: 3932..3997), hits: 1) -> "ld out\");\r\n        userTokenBala...ce[msg.sender] += tokenAmountToR"
+- Statement (location: (source ID: 31, lines: 83..84, bytes: 3932..3997), hits: 1) -> "ld out\");\r\n        userTokenBala...ce[msg.sender] += tokenAmountToR"
+- Statement (location: (source ID: 31, lines: 83..84, bytes: 3950..3997), hits: 1) -> " userTokenBalance[msg.sender] += tokenAmountToR"
+- Line (location: (source ID: 31, lines: 84..85, bytes: 4007..4042), hits: 1) -> "       (bool success, )= fundsRecei"
+- Statement (location: (source ID: 31, lines: 84..85, bytes: 4007..4042), hits: 1) -> "       (bool success, )= fundsRecei"
+- Branch (branch: 11, path: 0) (location: (source ID: 31, lines: 84..85, bytes: 4007..4042), hits: 0) -> "       (bool success, )= fundsRecei"
+- Branch (branch: 11, path: 1) (location: (source ID: 31, lines: 84..85, bytes: 4007..4042), hits: 1) -> "       (bool success, )= fundsRecei"
+- Line (location: (source ID: 31, lines: 85..86, bytes: 4052..4099), hits: 1) -> ".call{value: msg.value}(\"\");\r\n        require(s"
+- Statement (location: (source ID: 31, lines: 85..86, bytes: 4052..4099), hits: 1) -> ".call{value: msg.value}(\"\");\r\n        require(s"
+- Line (location: (source ID: 31, lines: 88..94, bytes: 4112..4380), hits: 2) -> "sfer Failed\");\r\n        emit Tok...r];\r\n        delete userTokenBal"
+- Function "claim" (location: (source ID: 31, lines: 88..94, bytes: 4112..4380), hits: 2) -> "sfer Failed\");\r\n        emit Tok...r];\r\n        delete userTokenBal"
+- Line (location: (source ID: 31, lines: 89..90, bytes: 4148..4206), hits: 2) -> "y(msg.sender, tokenAmountToReceive);\r\n    }\r\n\r\n    functio"
+- Statement (location: (source ID: 31, lines: 89..90, bytes: 4148..4206), hits: 2) -> "y(msg.sender, tokenAmountToReceive);\r\n    }\r\n\r\n    functio"
+- Branch (branch: 12, path: 0) (location: (source ID: 31, lines: 89..90, bytes: 4148..4206), hits: 1) -> "y(msg.sender, tokenAmountToReceive);\r\n    }\r\n\r\n    functio"
+- Branch (branch: 12, path: 1) (location: (source ID: 31, lines: 89..90, bytes: 4148..4206), hits: 1) -> "y(msg.sender, tokenAmountToReceive);\r\n    }\r\n\r\n    functio"
+- Line (location: (source ID: 31, lines: 90..91, bytes: 4216..4261), hits: 1) -> "external {\r\n        require(block.timestamp >"
+- Statement (location: (source ID: 31, lines: 90..91, bytes: 4216..4261), hits: 1) -> "external {\r\n        require(block.timestamp >"
+- Line (location: (source ID: 31, lines: 92..93, bytes: 4316..4373), hits: 1) -> "unt = userTokenBalance[msg.sender];\r\n        delete userT"
+- Statement (location: (source ID: 31, lines: 92..93, bytes: 4316..4373), hits: 1) -> "unt = userTokenBalance[msg.sender];\r\n        delete userT"
+- Line (location: (source ID: 31, lines: 95..100, bytes: 4386..4590), hits: 1) -> "sg.sender];\r\n        IERC20(sale...ce,,,) = IAggregator(dataFeedAdd"
+- Function "getEtherPrice" (location: (source ID: 31, lines: 95..100, bytes: 4386..4590), hits: 1) -> "sg.sender];\r\n        IERC20(sale...ce,,,) = IAggregator(dataFeedAdd"
+- Line (location: (source ID: 31, lines: 96..97, bytes: 4450..4518), hits: 2) -> "ender, amount);\r\n    }\r\n\r\n    fu...on getEtherPrice() public view r"
+- Statement (location: (source ID: 31, lines: 96..97, bytes: 4450..4518), hits: 2) -> "ender, amount);\r\n    }\r\n\r\n    fu...on getEtherPrice() public view r"
+- Statement (location: (source ID: 31, lines: 96..97, bytes: 4472..4518), hits: 2) -> "\r\n\r\n    function getEtherPrice() public view r"
+- Line (location: (source ID: 31, lines: 97..98, bytes: 4527..4553), hits: 2) -> "int256) {\r\n       (, int25"
+- Statement (location: (source ID: 31, lines: 97..98, bytes: 4527..4553), hits: 2) -> "int256) {\r\n       (, int25"
+- Line (location: (source ID: 31, lines: 98..99, bytes: 4562..4583), hits: 2) -> ",) = IAggregator(data"
+- Statement (location: (source ID: 31, lines: 98..99, bytes: 4562..4583), hits: 2) -> ",) = IAggregator(data"
+- Line (location: (source ID: 31, lines: 101..104, bytes: 4596..4759), hits: 1) -> "latestRoundData();\r\n       price...(address tokenAddress_, uint256 "
+- Function "emergencyERC20Withdraw" (location: (source ID: 31, lines: 101..104, bytes: 4596..4759), hits: 1) -> "latestRoundData();\r\n       price...(address tokenAddress_, uint256 "
+- Line (location: (source ID: 31, lines: 102..103, bytes: 4697..4752), hits: 1) -> "unction emergencyERC20Withdraw(address tokenAddress_, u"
+- Statement (location: (source ID: 31, lines: 102..103, bytes: 4697..4752), hits: 1) -> "unction emergencyERC20Withdraw(address tokenAddress_, u"
+- Line (location: (source ID: 31, lines: 105..110, bytes: 4765..4981), hits: 1) -> "_) external onlyOwner {\r\n       ...address(this).balance;\r\n        "
+- Function "emergencyETHWithdraw" (location: (source ID: 31, lines: 105..110, bytes: 4765..4981), hits: 1) -> "_) external onlyOwner {\r\n       ...address(this).balance;\r\n        "
+- Line (location: (source ID: 31, lines: 106..107, bytes: 4826..4865), hits: 1) -> "ansfer(msg.sender, amount_);\r\n    }\r\n\r\n"
+- Statement (location: (source ID: 31, lines: 106..107, bytes: 4826..4865), hits: 1) -> "ansfer(msg.sender, amount_);\r\n    }\r\n\r\n"
+- Line (location: (source ID: 31, lines: 107..108, bytes: 4875..4929), hits: 1) -> "on emergencyETHWithdraw() external onlyOwner {\r\n      "
+- Statement (location: (source ID: 31, lines: 107..108, bytes: 4875..4929), hits: 1) -> "on emergencyETHWithdraw() external onlyOwner {\r\n      "
+- Statement (location: (source ID: 31, lines: 107..108, bytes: 4894..4929), hits: 1) -> "draw() external onlyOwner {\r\n      "
+- Line (location: (source ID: 31, lines: 108..109, bytes: 4939..4974), hits: 1) -> "balance = address(this).balance;\r\n "
+- Statement (location: (source ID: 31, lines: 108..109, bytes: 4939..4974), hits: 1) -> "balance = address(this).balance;\r\n "
+- Branch (branch: 13, path: 0) (location: (source ID: 31, lines: 108..109, bytes: 4939..4974), hits: 0) -> "balance = address(this).balance;\r\n "
+- Branch (branch: 13, path: 1) (location: (source ID: 31, lines: 108..109, bytes: 4939..4974), hits: 1) -> "balance = address(this).balance;\r\n "
+
+test/Presale.t.sol:
+- Line (location: (source ID: 33, lines: 10..11, bytes: 243..361), hits: 37) -> "ec;\r\n    constructor(string memo... _mint(msg.sender, 100_000_000 *"
+- Statement (location: (source ID: 33, lines: 10..11, bytes: 311..319), hits: 37) -> "0(n,s) {"
+- Statement (location: (source ID: 33, lines: 10..11, bytes: 321..358), hits: 37) -> "dec = d; _mint(msg.sender, 100_000_00"
+- Function "constructor" (location: (source ID: 33, lines: 10..11, bytes: 243..361), hits: 37) -> "ec;\r\n    constructor(string memo... _mint(msg.sender, 100_000_000 *"
+- Line (location: (source ID: 33, lines: 11..12, bytes: 366..433), hits: 37) -> "); }\r\n    function mint(address ... uint256 amt) external { _mint(t"
+- Statement (location: (source ID: 33, lines: 11..12, bytes: 416..430), hits: 37) -> "xternal { _min"
+- Function "mint" (location: (source ID: 33, lines: 11..12, bytes: 366..433), hits: 37) -> "); }\r\n    function mint(address ... uint256 amt) external { _mint(t"
+- Line (location: (source ID: 33, lines: 12..13, bytes: 438..511), hits: 6) -> "t); }\r\n    function decimals() p...w override returns (uint8) { ret"
+- Statement (location: (source ID: 33, lines: 12..13, bytes: 497..508), hits: 6) -> " (uint8) { "
+- Function "decimals" (location: (source ID: 33, lines: 12..13, bytes: 438..511), hits: 6) -> "t); }\r\n    function decimals() p...w override returns (uint8) { ret"
+- Line (location: (source ID: 33, lines: 16..17, bytes: 597..712), hits: 2) -> "00 * 1e8;\r\n    function latestRo...256,uint256,uint80) { return (0,"
+- Statement (location: (source ID: 33, lines: 16..17, bytes: 687..709), hits: 2) -> "t256,uint80) { return "
+- Function "latestRoundData" (location: (source ID: 33, lines: 16..17, bytes: 597..712), hits: 2) -> "00 * 1e8;\r\n    function latestRo...256,uint256,uint80) { return (0,"
+
+Anchors for Contract "Presale" (solc 0.8.24, source ID 31):
+- creation IC 5 -> Item 0: Line (location: (source ID: 31, lines: 29..41, bytes: 988..1686), hits: 13)
+- creation IC 5 -> Item 1: Function "constructor" (location: (source ID: 31, lines: 29..41, bytes: 988..1686), hits: 13)
+- creation IC 189 -> Item 2: Line (location: (source ID: 31, lines: 30..31, bytes: 1258..1294), hits: 13)
+- creation IC 189 -> Item 3: Statement (location: (source ID: 31, lines: 30..31, bytes: 1258..1294), hits: 13)
+- creation IC 253 -> Item 4: Line (location: (source ID: 31, lines: 31..32, bytes: 1304..1330), hits: 13)
+- creation IC 253 -> Item 5: Statement (location: (source ID: 31, lines: 31..32, bytes: 1304..1330), hits: 13)
+- creation IC 317 -> Item 6: Line (location: (source ID: 31, lines: 32..33, bytes: 1340..1366), hits: 13)
+- creation IC 317 -> Item 7: Statement (location: (source ID: 31, lines: 32..33, bytes: 1340..1366), hits: 13)
+- creation IC 381 -> Item 8: Line (location: (source ID: 31, lines: 33..34, bytes: 1376..1420), hits: 13)
+- creation IC 381 -> Item 9: Statement (location: (source ID: 31, lines: 33..34, bytes: 1376..1420), hits: 13)
+- creation IC 445 -> Item 10: Line (location: (source ID: 31, lines: 34..35, bytes: 1430..1464), hits: 13)
+- creation IC 445 -> Item 11: Statement (location: (source ID: 31, lines: 34..35, bytes: 1430..1464), hits: 13)
+- creation IC 509 -> Item 12: Line (location: (source ID: 31, lines: 35..36, bytes: 1474..1510), hits: 13)
+- creation IC 509 -> Item 13: Statement (location: (source ID: 31, lines: 35..36, bytes: 1474..1510), hits: 13)
+- creation IC 516 -> Item 14: Line (location: (source ID: 31, lines: 36..37, bytes: 1520..1548), hits: 13)
+- creation IC 516 -> Item 15: Statement (location: (source ID: 31, lines: 36..37, bytes: 1520..1548), hits: 13)
+- creation IC 523 -> Item 16: Line (location: (source ID: 31, lines: 37..38, bytes: 1558..1582), hits: 13)
+- creation IC 523 -> Item 17: Statement (location: (source ID: 31, lines: 37..38, bytes: 1558..1582), hits: 13)
+- creation IC 530 -> Item 18: Line (location: (source ID: 31, lines: 38..39, bytes: 1592..1608), hits: 13)
+- creation IC 530 -> Item 19: Statement (location: (source ID: 31, lines: 38..39, bytes: 1592..1608), hits: 13)
+- creation IC 550 -> Item 20: Line (location: (source ID: 31, lines: 39..40, bytes: 1618..1679), hits: 13)
+- creation IC 550 -> Item 21: Statement (location: (source ID: 31, lines: 39..40, bytes: 1618..1679), hits: 13)
+- creation IC 562 -> Item 22: Branch (branch: 0, path: 0) (location: (source ID: 31, lines: 39..40, bytes: 1618..1679), hits: 0)
+- creation IC 622 -> Item 23: Branch (branch: 0, path: 1) (location: (source ID: 31, lines: 39..40, bytes: 1618..1679), hits: 13)
+-  runtime IC 879 -> Item 24: Line (location: (source ID: 31, lines: 42..45, bytes: 1692..1843), hits: 12)
+-  runtime IC 879 -> Item 25: Function "fundPresale" (location: (source ID: 31, lines: 42..45, bytes: 1692..1843), hits: 12)
+-  runtime IC 2144 -> Item 26: Line (location: (source ID: 31, lines: 43..44, bytes: 1759..1836), hits: 12)
+-  runtime IC 2144 -> Item 27: Statement (location: (source ID: 31, lines: 43..44, bytes: 1759..1836), hits: 12)
+-  runtime IC 647 -> Item 28: Line (location: (source ID: 31, lines: 46..47, bytes: 1849..1934), hits: 2)
+-  runtime IC 1520 -> Item 29: Statement (location: (source ID: 31, lines: 46..47, bytes: 1904..1931), hits: 2)
+-  runtime IC 647 -> Item 30: Function "blackList" (location: (source ID: 31, lines: 46..47, bytes: 1849..1934), hits: 2)
+-  runtime IC 1171 -> Item 31: Line (location: (source ID: 31, lines: 47..48, bytes: 1939..2031), hits: 1)
+-  runtime IC 2565 -> Item 32: Statement (location: (source ID: 31, lines: 47..48, bytes: 2000..2028), hits: 1)
+-  runtime IC 1171 -> Item 33: Function "removeBlacklist" (location: (source ID: 31, lines: 47..48, bytes: 1939..2031), hits: 1)
+-  runtime IC 5162 -> Item 34: Line (location: (source ID: 31, lines: 49..57, bytes: 2037..2324), hits: 7)
+-  runtime IC 5162 -> Item 35: Function "checkCurrentPhase" (location: (source ID: 31, lines: 49..57, bytes: 2037..2324), hits: 7)
+-  runtime IC 5164 -> Item 36: Statement (location: (source ID: 31, lines: 50..51, bytes: 2119..2135), hits: 7)
+-  runtime IC 5164 -> Item 37: Line (location: (source ID: 31, lines: 50..55, bytes: 2116..2289), hits: 7)
+-  runtime IC 5175 -> Item 38: Branch (branch: 1, path: 0) (location: (source ID: 31, lines: 50..55, bytes: 2116..2289), hits: 7)
+-  runtime IC 5199 -> Item 39: Statement (location: (source ID: 31, lines: 51..52, bytes: 2154..2173), hits: 7)
+-  runtime IC 5175 -> Item 40: Statement (location: (source ID: 31, lines: 51..52, bytes: 2154..2197), hits: 7)
+-  runtime IC 5175 -> Item 41: Statement (location: (source ID: 31, lines: 51..52, bytes: 2154..2230), hits: 7)
+-  runtime IC 5221 -> Item 42: Statement (location: (source ID: 31, lines: 51..52, bytes: 2201..2230), hits: 0)
+-  runtime IC 5175 -> Item 43: Line (location: (source ID: 31, lines: 51..54, bytes: 2151..2279), hits: 7)
+-  runtime IC 5233 -> Item 44: Branch (branch: 2, path: 0) (location: (source ID: 31, lines: 51..54, bytes: 2151..2279), hits: 7)
+-  runtime IC 5233 -> Item 45: Line (location: (source ID: 31, lines: 52..53, bytes: 2250..2264), hits: 7)
+-  runtime IC 5233 -> Item 46: Statement (location: (source ID: 31, lines: 52..53, bytes: 2250..2264), hits: 7)
+-  runtime IC 5258 -> Item 47: Line (location: (source ID: 31, lines: 55..56, bytes: 2298..2317), hits: 7)
+-  runtime IC 5258 -> Item 48: Statement (location: (source ID: 31, lines: 55..56, bytes: 2298..2317), hits: 7)
+-  runtime IC 1211 -> Item 49: Line (location: (source ID: 31, lines: 58..73, bytes: 2330..3342), hits: 8)
+-  runtime IC 1211 -> Item 50: Function "buyWithStable" (location: (source ID: 31, lines: 58..73, bytes: 2330..3342), hits: 8)
+-  runtime IC 2652 -> Item 51: Line (location: (source ID: 31, lines: 59..60, bytes: 2416..2474), hits: 8)
+-  runtime IC 2652 -> Item 52: Statement (location: (source ID: 31, lines: 59..60, bytes: 2416..2474), hits: 8)
+-  runtime IC 2731 -> Item 53: Branch (branch: 3, path: 0) (location: (source ID: 31, lines: 59..60, bytes: 2416..2474), hits: 1)
+-  runtime IC 2789 -> Item 54: Branch (branch: 3, path: 1) (location: (source ID: 31, lines: 59..60, bytes: 2416..2474), hits: 7)
+-  runtime IC 2790 -> Item 55: Line (location: (source ID: 31, lines: 60..61, bytes: 2484..2584), hits: 7)
+-  runtime IC 2790 -> Item 56: Statement (location: (source ID: 31, lines: 60..61, bytes: 2484..2584), hits: 7)
+-  runtime IC 2814 -> Item 57: Branch (branch: 4, path: 0) (location: (source ID: 31, lines: 60..61, bytes: 2484..2584), hits: 0)
+-  runtime IC 2872 -> Item 58: Branch (branch: 4, path: 1) (location: (source ID: 31, lines: 60..61, bytes: 2484..2584), hits: 7)
+-  runtime IC 2873 -> Item 59: Line (location: (source ID: 31, lines: 61..62, bytes: 2594..2690), hits: 7)
+-  runtime IC 2873 -> Item 60: Statement (location: (source ID: 31, lines: 61..62, bytes: 2594..2690), hits: 7)
+-  runtime IC 3044 -> Item 61: Branch (branch: 5, path: 0) (location: (source ID: 31, lines: 61..62, bytes: 2594..2690), hits: 1)
+-  runtime IC 3102 -> Item 62: Branch (branch: 5, path: 1) (location: (source ID: 31, lines: 61..62, bytes: 2594..2690), hits: 6)
+-  runtime IC 3103 -> Item 63: Line (location: (source ID: 31, lines: 62..63, bytes: 2700..2756), hits: 6)
+-  runtime IC 3103 -> Item 64: Statement (location: (source ID: 31, lines: 62..63, bytes: 2700..2756), hits: 6)
+-  runtime IC 3104 -> Item 65: Statement (location: (source ID: 31, lines: 62..63, bytes: 2712..2756), hits: 6)
+-  runtime IC 3215 -> Item 66: Line (location: (source ID: 31, lines: 63..64, bytes: 2766..2794), hits: 6)
+-  runtime IC 3215 -> Item 67: Statement (location: (source ID: 31, lines: 63..64, bytes: 2766..2794), hits: 6)
+-  runtime IC 3216 -> Item 68: Statement (location: (source ID: 31, lines: 64..65, bytes: 2808..2817), hits: 6)
+-  runtime IC 3227 -> Item 69: Statement (location: (source ID: 31, lines: 64..65, bytes: 2819..2878), hits: 5)
+-  runtime IC 3216 -> Item 70: Line (location: (source ID: 31, lines: 64..66, bytes: 2804..2969), hits: 6)
+-  runtime IC 3227 -> Item 71: Branch (branch: 6, path: 0) (location: (source ID: 31, lines: 64..66, bytes: 2804..2969), hits: 5)
+-  runtime IC 3283 -> Item 72: Branch (branch: 6, path: 1) (location: (source ID: 31, lines: 64..66, bytes: 2804..2969), hits: 1)
+-  runtime IC 3283 -> Item 73: Line (location: (source ID: 31, lines: 65..66, bytes: 2893..2969), hits: 1)
+-  runtime IC 3283 -> Item 74: Statement (location: (source ID: 31, lines: 65..66, bytes: 2893..2969), hits: 1)
+-  runtime IC 3370 -> Item 75: Line (location: (source ID: 31, lines: 66..67, bytes: 2979..3018), hits: 6)
+-  runtime IC 3370 -> Item 76: Statement (location: (source ID: 31, lines: 66..67, bytes: 2979..3018), hits: 6)
+-  runtime IC 3380 -> Item 77: Line (location: (source ID: 31, lines: 67..68, bytes: 3028..3061), hits: 6)
+-  runtime IC 3380 -> Item 78: Statement (location: (source ID: 31, lines: 67..68, bytes: 3028..3061), hits: 6)
+-  runtime IC 3404 -> Item 79: Line (location: (source ID: 31, lines: 68..69, bytes: 3071..3121), hits: 6)
+-  runtime IC 3404 -> Item 80: Statement (location: (source ID: 31, lines: 68..69, bytes: 3071..3121), hits: 6)
+-  runtime IC 3416 -> Item 81: Branch (branch: 7, path: 0) (location: (source ID: 31, lines: 68..69, bytes: 3071..3121), hits: 0)
+-  runtime IC 3474 -> Item 82: Branch (branch: 7, path: 1) (location: (source ID: 31, lines: 68..69, bytes: 3071..3121), hits: 6)
+-  runtime IC 3475 -> Item 83: Line (location: (source ID: 31, lines: 69..70, bytes: 3131..3183), hits: 6)
+-  runtime IC 3475 -> Item 84: Statement (location: (source ID: 31, lines: 69..70, bytes: 3131..3183), hits: 6)
+-  runtime IC 3558 -> Item 85: Line (location: (source ID: 31, lines: 70..71, bytes: 3193..3278), hits: 6)
+-  runtime IC 3558 -> Item 86: Statement (location: (source ID: 31, lines: 70..71, bytes: 3193..3278), hits: 6)
+-  runtime IC 3636 -> Item 87: Line (location: (source ID: 31, lines: 71..72, bytes: 3288..3335), hits: 6)
+-  runtime IC 3636 -> Item 88: Statement (location: (source ID: 31, lines: 71..72, bytes: 3288..3335), hits: 6)
+-  runtime IC 1251 -> Item 89: Line (location: (source ID: 31, lines: 74..87, bytes: 3348..4106), hits: 3)
+-  runtime IC 1251 -> Item 90: Function "buyWithEther" (location: (source ID: 31, lines: 74..87, bytes: 3348..4106), hits: 3)
+-  runtime IC 3720 -> Item 91: Line (location: (source ID: 31, lines: 75..76, bytes: 3399..3457), hits: 3)
+-  runtime IC 3720 -> Item 92: Statement (location: (source ID: 31, lines: 75..76, bytes: 3399..3457), hits: 3)
+-  runtime IC 3799 -> Item 93: Branch (branch: 8, path: 0) (location: (source ID: 31, lines: 75..76, bytes: 3399..3457), hits: 1)
+-  runtime IC 3857 -> Item 94: Branch (branch: 8, path: 1) (location: (source ID: 31, lines: 75..76, bytes: 3399..3457), hits: 2)
+-  runtime IC 3858 -> Item 95: Line (location: (source ID: 31, lines: 76..77, bytes: 3467..3567), hits: 2)
+-  runtime IC 3858 -> Item 96: Statement (location: (source ID: 31, lines: 76..77, bytes: 3467..3567), hits: 2)
+-  runtime IC 3882 -> Item 97: Branch (branch: 9, path: 0) (location: (source ID: 31, lines: 76..77, bytes: 3467..3567), hits: 1)
+-  runtime IC 3940 -> Item 98: Branch (branch: 9, path: 1) (location: (source ID: 31, lines: 76..77, bytes: 3467..3567), hits: 1)
+-  runtime IC 3941 -> Item 99: Line (location: (source ID: 31, lines: 77..78, bytes: 3577..3630), hits: 1)
+-  runtime IC 3941 -> Item 100: Statement (location: (source ID: 31, lines: 77..78, bytes: 3577..3630), hits: 1)
+-  runtime IC 3951 -> Item 101: Statement (location: (source ID: 31, lines: 77..78, bytes: 3596..3623), hits: 1)
+-  runtime IC 3942 -> Item 102: Statement (location: (source ID: 31, lines: 77..78, bytes: 3596..3630), hits: 1)
+-  runtime IC 3951 -> Item 103: Statement (location: (source ID: 31, lines: 77..78, bytes: 3608..3623), hits: 1)
+-  runtime IC 3982 -> Item 104: Line (location: (source ID: 31, lines: 78..79, bytes: 3640..3708), hits: 1)
+-  runtime IC 3982 -> Item 105: Statement (location: (source ID: 31, lines: 78..79, bytes: 3640..3708), hits: 1)
+-  runtime IC 4007 -> Item 106: Statement (location: (source ID: 31, lines: 78..79, bytes: 3671..3685), hits: 1)
+-  runtime IC 3983 -> Item 107: Statement (location: (source ID: 31, lines: 78..79, bytes: 3671..3708), hits: 1)
+-  runtime IC 4034 -> Item 108: Line (location: (source ID: 31, lines: 79..80, bytes: 3718..3757), hits: 1)
+-  runtime IC 4034 -> Item 109: Statement (location: (source ID: 31, lines: 79..80, bytes: 3718..3757), hits: 1)
+-  runtime IC 4044 -> Item 110: Line (location: (source ID: 31, lines: 80..81, bytes: 3767..3800), hits: 1)
+-  runtime IC 4044 -> Item 111: Statement (location: (source ID: 31, lines: 80..81, bytes: 3767..3800), hits: 1)
+-  runtime IC 4068 -> Item 112: Line (location: (source ID: 31, lines: 81..82, bytes: 3810..3860), hits: 1)
+-  runtime IC 4068 -> Item 113: Statement (location: (source ID: 31, lines: 81..82, bytes: 3810..3860), hits: 1)
+-  runtime IC 4080 -> Item 114: Branch (branch: 10, path: 0) (location: (source ID: 31, lines: 81..82, bytes: 3810..3860), hits: 0)
+-  runtime IC 4138 -> Item 115: Branch (branch: 10, path: 1) (location: (source ID: 31, lines: 81..82, bytes: 3810..3860), hits: 1)
+-  runtime IC 4139 -> Item 116: Line (location: (source ID: 31, lines: 82..83, bytes: 3870..3922), hits: 1)
+-  runtime IC 4139 -> Item 117: Statement (location: (source ID: 31, lines: 82..83, bytes: 3870..3922), hits: 1)
+-  runtime IC 4222 -> Item 118: Line (location: (source ID: 31, lines: 83..84, bytes: 3932..3997), hits: 1)
+-  runtime IC 4222 -> Item 119: Statement (location: (source ID: 31, lines: 83..84, bytes: 3932..3997), hits: 1)
+-  runtime IC 4223 -> Item 120: Statement (location: (source ID: 31, lines: 83..84, bytes: 3950..3997), hits: 1)
+-  runtime IC 4359 -> Item 121: Line (location: (source ID: 31, lines: 84..85, bytes: 4007..4042), hits: 1)
+-  runtime IC 4359 -> Item 122: Statement (location: (source ID: 31, lines: 84..85, bytes: 4007..4042), hits: 1)
+-  runtime IC 4364 -> Item 123: Branch (branch: 11, path: 0) (location: (source ID: 31, lines: 84..85, bytes: 4007..4042), hits: 0)
+-  runtime IC 4422 -> Item 124: Branch (branch: 11, path: 1) (location: (source ID: 31, lines: 84..85, bytes: 4007..4042), hits: 1)
+-  runtime IC 4423 -> Item 125: Line (location: (source ID: 31, lines: 85..86, bytes: 4052..4099), hits: 1)
+-  runtime IC 4423 -> Item 126: Statement (location: (source ID: 31, lines: 85..86, bytes: 4052..4099), hits: 1)
+-  runtime IC 687 -> Item 127: Line (location: (source ID: 31, lines: 88..94, bytes: 4112..4380), hits: 2)
+-  runtime IC 687 -> Item 128: Function "claim" (location: (source ID: 31, lines: 88..94, bytes: 4112..4380), hits: 2)
+-  runtime IC 1608 -> Item 129: Line (location: (source ID: 31, lines: 89..90, bytes: 4148..4206), hits: 2)
+-  runtime IC 1608 -> Item 130: Statement (location: (source ID: 31, lines: 89..90, bytes: 4148..4206), hits: 2)
+-  runtime IC 1617 -> Item 131: Branch (branch: 12, path: 0) (location: (source ID: 31, lines: 89..90, bytes: 4148..4206), hits: 1)
+-  runtime IC 1675 -> Item 132: Branch (branch: 12, path: 1) (location: (source ID: 31, lines: 89..90, bytes: 4148..4206), hits: 1)
+-  runtime IC 1676 -> Item 133: Line (location: (source ID: 31, lines: 90..91, bytes: 4216..4261), hits: 1)
+-  runtime IC 1676 -> Item 134: Statement (location: (source ID: 31, lines: 90..91, bytes: 4216..4261), hits: 1)
+-  runtime IC 1805 -> Item 135: Line (location: (source ID: 31, lines: 92..93, bytes: 4316..4373), hits: 1)
+-  runtime IC 1805 -> Item 136: Statement (location: (source ID: 31, lines: 92..93, bytes: 4316..4373), hits: 1)
+-  runtime IC 1087 -> Item 137: Line (location: (source ID: 31, lines: 95..100, bytes: 4386..4590), hits: 1)
+-  runtime IC 1087 -> Item 138: Function "getEtherPrice" (location: (source ID: 31, lines: 95..100, bytes: 4386..4590), hits: 1)
+-  runtime IC 2345 -> Item 139: Line (location: (source ID: 31, lines: 96..97, bytes: 4450..4518), hits: 2)
+-  runtime IC 2345 -> Item 140: Statement (location: (source ID: 31, lines: 96..97, bytes: 4450..4518), hits: 2)
+-  runtime IC 2346 -> Item 141: Statement (location: (source ID: 31, lines: 96..97, bytes: 4472..4518), hits: 2)
+-  runtime IC 2494 -> Item 142: Line (location: (source ID: 31, lines: 97..98, bytes: 4527..4553), hits: 2)
+-  runtime IC 2494 -> Item 143: Statement (location: (source ID: 31, lines: 97..98, bytes: 4527..4553), hits: 2)
+-  runtime IC 2513 -> Item 144: Line (location: (source ID: 31, lines: 98..99, bytes: 4562..4583), hits: 2)
+-  runtime IC 2513 -> Item 145: Statement (location: (source ID: 31, lines: 98..99, bytes: 4562..4583), hits: 2)
+-  runtime IC 607 -> Item 146: Line (location: (source ID: 31, lines: 101..104, bytes: 4596..4759), hits: 1)
+-  runtime IC 607 -> Item 147: Function "emergencyERC20Withdraw" (location: (source ID: 31, lines: 101..104, bytes: 4596..4759), hits: 1)
+-  runtime IC 1465 -> Item 148: Line (location: (source ID: 31, lines: 102..103, bytes: 4697..4752), hits: 1)
+-  runtime IC 1465 -> Item 149: Statement (location: (source ID: 31, lines: 102..103, bytes: 4697..4752), hits: 1)
+-  runtime IC 709 -> Item 150: Line (location: (source ID: 31, lines: 105..110, bytes: 4765..4981), hits: 1)
+-  runtime IC 709 -> Item 151: Function "emergencyETHWithdraw" (location: (source ID: 31, lines: 105..110, bytes: 4765..4981), hits: 1)
+-  runtime IC 1892 -> Item 152: Line (location: (source ID: 31, lines: 106..107, bytes: 4826..4865), hits: 1)
+-  runtime IC 1892 -> Item 153: Statement (location: (source ID: 31, lines: 106..107, bytes: 4826..4865), hits: 1)
+-  runtime IC 1896 -> Item 154: Line (location: (source ID: 31, lines: 107..108, bytes: 4875..4929), hits: 1)
+-  runtime IC 1896 -> Item 155: Statement (location: (source ID: 31, lines: 107..108, bytes: 4875..4929), hits: 1)
+-  runtime IC 1897 -> Item 156: Statement (location: (source ID: 31, lines: 107..108, bytes: 4894..4929), hits: 1)
+-  runtime IC 2000 -> Item 157: Line (location: (source ID: 31, lines: 108..109, bytes: 4939..4974), hits: 1)
+-  runtime IC 2000 -> Item 158: Statement (location: (source ID: 31, lines: 108..109, bytes: 4939..4974), hits: 1)
+-  runtime IC 2005 -> Item 159: Branch (branch: 13, path: 0) (location: (source ID: 31, lines: 108..109, bytes: 4939..4974), hits: 0)
+-  runtime IC 2063 -> Item 160: Branch (branch: 13, path: 1) (location: (source ID: 31, lines: 108..109, bytes: 4939..4974), hits: 1)
+
+Anchors for Contract "MockERC20" (solc 0.8.24, source ID 33):
+- creation IC 5 -> Item 161: Line (location: (source ID: 33, lines: 10..11, bytes: 243..361), hits: 37)
+- creation IC 95 -> Item 162: Statement (location: (source ID: 33, lines: 10..11, bytes: 311..319), hits: 37)
+- creation IC 121 -> Item 163: Statement (location: (source ID: 33, lines: 10..11, bytes: 321..358), hits: 37)
+- creation IC 5 -> Item 164: Function "constructor" (location: (source ID: 33, lines: 10..11, bytes: 243..361), hits: 37)
+-  runtime IC 346 -> Item 165: Line (location: (source ID: 33, lines: 11..12, bytes: 366..433), hits: 37)
+-  runtime IC 803 -> Item 166: Statement (location: (source ID: 33, lines: 11..12, bytes: 416..430), hits: 37)
+-  runtime IC 346 -> Item 167: Function "mint" (location: (source ID: 33, lines: 11..12, bytes: 366..433), hits: 37)
+-  runtime IC 316 -> Item 168: Line (location: (source ID: 33, lines: 12..13, bytes: 438..511), hits: 6)
+-  runtime IC 783 -> Item 169: Statement (location: (source ID: 33, lines: 12..13, bytes: 497..508), hits: 6)
+-  runtime IC 316 -> Item 170: Function "decimals" (location: (source ID: 33, lines: 12..13, bytes: 438..511), hits: 6)
+
+Anchors for Contract "MockAggregator" (solc 0.8.24, source ID 33):
+-  runtime IC 86 -> Item 171: Line (location: (source ID: 33, lines: 16..17, bytes: 597..712), hits: 2)
+-  runtime IC 131 -> Item 172: Statement (location: (source ID: 33, lines: 16..17, bytes: 687..709), hits: 2)
+-  runtime IC 86 -> Item 173: Function "latestRoundData" (location: (source ID: 33, lines: 16..17, bytes: 597..712), hits: 2)
+
